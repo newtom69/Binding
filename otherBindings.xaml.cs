@@ -29,36 +29,19 @@ namespace Binding
                 PersonData personneValidee = new PersonData(_personne.Nom, _personne.Prenom, _personne.Age);
                 listePersonnes.Add(personneValidee);
                 AfficheListePersonnes();
-
             }
 
             if (_personne.Age < 18 || _personne.Age > 120)
-            {
-                bordureAge.BorderBrush = Brushes.Red;
-            }
-            else
-            {
-                bordureAge.BorderBrush = Brushes.Transparent;
-            }
+                 bordureAge.BorderBrush = Brushes.Red;
+            else bordureAge.BorderBrush = Brushes.Transparent;
 
             if (_personne.Nom.Length < 2 || _personne.Nom.Length > 30)
-            {
-                bordureNom.BorderBrush = Brushes.Red;
-            }
-            else
-            {
-                bordureNom.BorderBrush = Brushes.Transparent;
-            }
+                 bordureNom.BorderBrush = Brushes.Red;
+            else bordureNom.BorderBrush = Brushes.Transparent;
 
-            if (_personne.Prenom.Length < 2 || _personne.Prenom.Length > 30)
-            {
-                bordurePrenom.BorderBrush = Brushes.Red;
-            }
-            else
-            {
-                bordurePrenom.BorderBrush = Brushes.Transparent;
-            }
-
+            if (_personne.Prenom.Length < 2 || _personne.Prenom.Length > 30)            
+                 bordurePrenom.BorderBrush = Brushes.Red;
+            else bordurePrenom.BorderBrush = Brushes.Transparent;
         }
 
         private void AfficheListePersonnes()
@@ -69,5 +52,16 @@ namespace Binding
                 affichageListe.Items.Add(person.Fullname);
             }
         }
+
+        private void BoutonEffacer(object sender, RoutedEventArgs e)
+        {
+            int dernier = listePersonnes.Count - 1;
+            if (dernier >= 0)
+            {
+                listePersonnes.RemoveAt(dernier);
+                AfficheListePersonnes();
+            }
+        }
     }
 }
+

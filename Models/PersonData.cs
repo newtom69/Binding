@@ -7,7 +7,7 @@
         public int Age { get; set; }
 
         public string Fullname {
-            get => string.Format("{0} {1} {2}", Nom, Prenom, Age.ToString());
+            get => $"{Nom} {Prenom}, age : {Age} ans";
             set { }
         }
 

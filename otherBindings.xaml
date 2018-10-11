@@ -29,6 +29,7 @@
             <TextBox ToolTip="L'age doit être compris entre 18 et 120 ans" Text="{Binding Age, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="15"/>
         </Border>
         <Button Content="Enregistrer" Click="Button_Click"></Button>
-        <ListView x:Name="affichageListe" Height="310"/>
+        <ListView x:Name="affichageListe" Height="280"/>
+        <Button Content="Effacer dernier élément" Click="BoutonEffacer"></Button>
     </StackPanel>
 </Window>
