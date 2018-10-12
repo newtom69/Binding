@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Binding"
              StartupUri="otherBindings.xaml">
     <Application.Resources>
-         
+        <ImageBrush x:Key="TileBrush" ViewportUnits="Absolute"
+                    Viewport="-10 -10 400 400" ImageSource="free.png"  Opacity="0.2"/>
     </Application.Resources>
 </Application>

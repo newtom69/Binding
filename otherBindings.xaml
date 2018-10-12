@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Binding"
         mc:Ignorable="d"
-        Title="otherBindings" Height="450" Width="450">
-
-    <StackPanel>
+        Title="otherBindings" Height="650" Width="650">
+    <Window.Resources>
+        
+    </Window.Resources>
+        <StackPanel>
         <!--<TextBlock>
             <TextBlock.Text>
                 <Binding Path="Title">
@@ -20,16 +22,16 @@
         <TextBlock Height="50" Text="{Binding RelativeSource={RelativeSource Self}, Path=Height}"/>-->
 
         <Border BorderThickness="3" x:Name="bordureNom">
-            <TextBox ToolTip="Le nom doit comporter entre 2 et 30 caractères" Text="{Binding Nom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="15"/>
+            <TextBox ToolTip="Le nom doit comporter entre 2 et 30 caractères" Text="{Binding Nom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="18"/>
         </Border>
         <Border BorderThickness="3" x:Name="bordurePrenom">
-            <TextBox ToolTip="Le prénom doit comporter entre 2 et 30 caractères" Text="{Binding Prenom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="15"/>
+            <TextBox ToolTip="Le prénom doit comporter entre 2 et 30 caractères" Text="{Binding Prenom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="18"/>
         </Border>
         <Border BorderThickness="3" x:Name="bordureAge">
-            <TextBox ToolTip="L'age doit être compris entre 18 et 120 ans" Text="{Binding Age, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="15"/>
+            <TextBox ToolTip="L'age doit être compris entre 18 et 120 ans" Text="{Binding Age, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="18"/>
         </Border>
         <Button Content="Enregistrer" Click="Button_Click"></Button>
-        <ListView x:Name="affichageListe" Height="280"/>
+        <ListView Background="{StaticResource TileBrush}" x:Name="affichageListe" Height="382" FontSize="18"/>
         <Button Content="Effacer dernier élément" Click="BoutonEffacer"></Button>
     </StackPanel>
 </Window>
